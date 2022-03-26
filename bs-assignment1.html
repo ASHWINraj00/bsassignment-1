@@ -1,0 +1,544 @@
+<!doctype html>
+<html>
+<head>
+    <title>Bootstrap assignment 1</title>
+    <link href="D:\images\masterlogo.jpg" rel="shortcut icon" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        *{   
+          margin: 0;
+          padding: 0;
+        }
+        .clear {
+          clear: both;
+        }
+        .background {
+            background: url('https://wallpaperaccess.com/full/5821758.jpg');
+            background-repeat: no-repeat; 
+            background-position: center;
+            background-size: cover;
+            min-height: 50vh;   
+        }
+        .nice {
+          font-family: 'Playball', cursive;
+          font-size: 2rem;
+          font-weight: 700;
+          text-transform: capitalize;
+          background-image: linear-gradient(360deg, #00dbde,#fc00ff);
+          background-clip: text;
+          -webkit-text-stroke-color: transparent;
+          -webkit-text-stroke-width: calc(1em / 16);
+          -webkit-background-clip: text; 
+          color: #000119;
+          padding: calc(calc(1em / 16)/ 2);
+          letter-spacing: calc(1em/8); 
+        } 
+        #prograsspadding {
+          padding: 0 5%;
+        } 
+        .subscribe {  
+          padding-bottom: 2rem;
+        } 
+        .column1 {
+          display: grid;
+          grid-template-columns: 20% 20% 25% 12%;
+          column-gap: 2%;
+          justify-content: center;
+        }
+        .para {
+          background-color: rgba(35, 44, 44, 0.692);
+          color: #fff;
+          padding: 12px; 
+          text-align: start;
+        }
+        .imgprofessor {
+          background: url('https://cutewallpaper.org/22/money-heist-professor-wallpapers/1741523475.jpg');
+          min-height: 340px;
+          padding-top: 260px; 
+          background-repeat: no-repeat;  
+          background-position: center;
+          background-size: cover;
+        }
+        .imgtokyo {
+          background: url('https://bingeddata.s3.amazonaws.com/uploads/2021/08/How-Has-Tokyo-Evolved-As-The-Necessary-Evil-In-Netflixs-Money-Heist.jpg');
+          min-height: 340px;
+          padding-top: 260px;  
+          background-repeat: no-repeat;  
+          background-position: center;
+          background-size: cover;
+        }
+        .imgberlin {
+          background: url('https://i0.wp.com/www.livestickers.com/wp-content/uploads//2020/09/Money_Heist46.png?resize=512%2C511&ssl=1');
+          min-height: 340px;
+          padding-top: 260px;
+          background-repeat: no-repeat;  
+          background-position: center;
+          background-size: cover; 
+        }
+        .imgraquel {
+          background: url('https://images.immediate.co.uk/production/volatile/sites/3/2021/08/money_heist_raquel-8aa0e1a.jpg');
+          min-height: 340px;
+          padding-top: 260px;
+          background-repeat: no-repeat;  
+          background-position: center;
+          background-size: cover;
+        }
+        .imgnairobi {
+          background: url('https://mcdn.wallpapersafari.com/medium/82/57/v9m8eK.jpg');
+          min-height: 340px;
+          padding-top: 260px;
+          background-repeat: no-repeat;  
+          background-position: center;
+          background-size: cover;
+        }
+        .imgdenver {
+          background: url('https://glamourpath.com/uploads/biography/2019/12/17/feature-1576569328070.jpg');
+          min-height: 340px;
+          padding-top: 260px;
+          background-repeat: no-repeat;  
+          background-position: center;
+          background-size: cover;
+        }
+        .imghelsinki {
+          background: url('https://virginradio.ro/wp-content/uploads/2020/04/Helsinki-La-Casa-de-Papel-1.jpg');  
+          min-height: 340px;
+          padding-top: 260px;
+          background-repeat: no-repeat;    
+          background-position: center;
+          background-size: cover;
+        }
+        .imgrio {
+          background: url('https://im.indiatimes.in/content/2020/Aug/RIO1_5f2ba5b149f97.jpg?w=725&h=543');
+          min-height: 340px;
+          padding-top: 260px;
+          background-repeat:no-repeat;
+          background-repeat: no-repeat;  
+          background-position: center;
+          background-size: cover;
+        }
+        .imgpalermo {
+          background: url('https://hips.hearstapps.com/hmg-prod/images/la-casa-de-papel-part3-e02-unit-00523-1563307071.jpg?crop=1.00xw:0.669xh;0,0.0136xh&resize=480:*');
+          min-height: 340px;
+          padding-top: 260px;
+          background-repeat: no-repeat;  
+          background-position: center;
+          background-size: cover;
+        }
+        .background2 {
+            background: url('https://wallpaperaccess.com/full/5821756.jpg');
+            background-repeat: no-repeat; 
+            background-position: center;
+            background-size: cover;
+            min-height: 40vh;  
+        }
+       @media only screen and (min-width:200px) and (max-width:992px) {
+        #btn1-2 {
+            display: none; 
+        }
+        #Title {
+          text-transform: uppercase;
+          font-family: sans-serif;
+          font-weight: 200;
+          font-size: larger;
+          color: whitesmoke;
+        }
+        #unorder1 {
+          display: none;
+        }
+        #touchbtn1 {
+          display: none;
+        }
+        #touchbtn2 {
+          text-align: center; 
+          text-transform: uppercase;
+          color: rgba(8, 12, 12, 0.692);
+          font-size: medium; 
+          font-weight: 400;
+        }
+        .big { 
+          display: none;
+        }
+        .background {
+          min-height: 80vh;
+        }
+       }  
+       @media only screen and (min-width:992px) and (max-width:1700px) {
+        #btn1-1 {
+            display: none; 
+        }  
+
+        #Title {
+          text-transform: uppercase;
+          font-family: sans-serif;
+          font-weight: 400;
+          font-size: xx-large;
+          color: whitesmoke;
+          letter-spacing: 1px;
+        }
+        #unorder2 {
+          display: none;
+        } 
+        #touchbtn2 {
+          display: none;
+        }
+       
+       #touchbtn1 {
+          text-align: center; 
+          text-transform: uppercase;
+          color: rgba(8, 12, 12, 0.692);
+          font-size: 1em; 
+          font-weight: 600;
+        }
+        .small {
+          display: none;
+        }
+      
+      }
+    
+    </style>    
+</head>   
+<body>  
+  <div class="background"> 
+  <header style="background-color: rgba(35, 44, 44, 0.692);">   
+    <nav class="navbar navbar-expand-lg navbar-dark">     
+    <div class="container-fluid">
+      <a href="#" class="navbar-brand ps-2" id="Title">
+        logo design 
+      </a> 
+
+      <button  type="button" class="navbar-toggler me-2" data-bs-toggle="collapse" data-bs-target="#myNavBar"
+      aria-controls="myNavBar" aria-expanded="false" aria-label="Toggle navigation"> 
+      <span class="navbar-toggler-icon"></span>      
+      </button>   
+     
+      <div class="collapse navbar-collapse" id="myNavBar">  
+        <ul class="navbar-nav ms-auto pe-2" style="text-align: end;" id="unorder1"> 
+          <li class="nav-item"> 
+            <a href="#" class="nav-link active pe-2" id="btn1-1">Home</a>  
+            <button type="button" class="btn btn-dark  me-2" id="btn1-2">Home</button>
+          </li>
+          <li class="nav-item"><a href="#" class="nav-link active pe-2">About</a></li>   
+          <li class="nav-item"><a  href="#" class="nav-link active pe-2">Team</a></li>
+          <li class="nav-item"><a href="#" class="nav-link active pe-2">Portfolio</a></li> 
+          <li class="nav-item"><a href="#" class="nav-link active pe-2">Contact</a></li> 
+        </ul>
+
+        <ul class="navbar-nav ms-auto pe-2" style="text-align: end;" id="unorder2"> 
+          <li class="nav-item">
+            <a href="#" class="nav-link active pe-2" id="btn1-1">Home</a>  
+            <button type="button" class="btn btn-dark  me-2" id="btn1-2">Home</button>
+          </li>
+          <li class="nav-item"><a href="#" class="nav-link  pe-2">About</a></li>   
+          <li class="nav-item"><a  href="#" class="nav-link  pe-2">Team</a></li>
+          <li class="nav-item"><a href="#" class="nav-link  pe-2">Portfolio</a></li> 
+          <li class="nav-item"><a href="#" class="nav-link  pe-2">Contact</a></li> 
+        </ul>
+      </div>
+    </div>  
+    </nav> 
+  </header> 
+  <div class="container pt-5 mt-5" style="text-align: center;">  
+    <h2 style="color: transparent;" class="nice">Nice to meet you!</h2>  
+    <p style="color: rgba(4, 5, 5, 0.692); font-size: medium; font-weight: 480;">We just dont't build website, we build brands</p>
+  </div>
+  <div class="container" style="text-align: center;">   
+    <button type="button" id="touchbtn1" class="btn btn-warning">get in touch</button>
+  <button type="button" id="touchbtn2" class="btn btn-sm btn-warning">get in touch</button>
+  </div>
+  </div>
+  <div class="clear"></div> 
+  <div class="container-fluid bg-light">
+    <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-1 row-cols-xl-1 row-cols-xxl-1">
+      <div class="col">
+        <h3 class="fontsize1" style="text-transform: uppercase; font-weight: 500; font-size: 2rem; text-align: center; padding-top: 2rem; letter-spacing: 1px;">about us</h3>
+        <p style="text-align: center; padding: 5px 15px; text-transform: capitalize; font-size: small; font-weight:480;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id reiciendis hic, quae perspiciatis saepe odio, voluptatibus eligendi,
+           atque quibusdam cum cupiditate earum possimus voluptates! Autem eaque aliquid quam voluptatum molestiae?</p>  
+      </div>
+    </div>
+    <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-2 pt-4 pb-5">
+      <div class="col">
+        <h4 id="fontsize2" style="text-transform: uppercase; font-weight: 500; font-size: 2rem; text-align: center; padding:2% 6%;">what can we do</h4>
+        <p style="text-align: center; padding: 5px 15px; text-transform: capitalize; font-size: small; font-weight:500;">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+           Impedit hic illum vitae fugit labore similique totam ut, 
+           repellat nobis in, qui at? Totam omnis dolorum impedit 
+           deleniti ipsa laboriosam blanditiis?Lorem ipsum dolor
+           sit amet consectetur adipisicing elit.Impedit hic illum vitae 
+           fugit labore similique totam ut,repellat nobis in, qui at?   
+           Totam omnis dolorum impedit deleniti ipsa laboriosam blanditiis?
+        </p> 
+      </div>  
+      <div class="col" id="prograsspadding">        
+         <h5 style="text-align: start; text-transform: uppercase; font-size: small; font-weight: 500; padding-top:5%;">design</h5>
+          <div class="progress" style="height: 20px; border: 0; margin-bottom: 3%;">
+          <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div> 
+          </div> 
+         <h5 style="text-align: start; text-transform: uppercase; font-size: small; font-weight: 500;">coding</h5>
+          <div class="progress" style="height: 20px; border: 0; margin-bottom: 3%;">
+          <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div> 
+          </div>
+         <h5 style="text-align: start; text-transform: uppercase; font-size: small; font-weight: 500;">marketing</h5> 
+          <div class="progress" style="height: 20px; border: 0; margin-bottom: 3%;">
+          <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">55%</div> 
+          </div>
+      </div>  
+    </div> 
+  </div>
+  <div class="clear"></div>
+  <div class="subscribe bg-warning big">
+    <h3 id="fontsize3" style="text-transform: uppercase; text-align: center; font-weight: 500; font-size: 2rem; padding-bottom: 2rem; padding-top: 3rem; letter-spacing: 1px;">subscribe to our news letter</h3> 
+    <div class="column1 mx-5 mb-4">  
+      <input type="text" class="form-control" placeholder="FIRST NAME" aria-label="FIRST NAME" style="background-color: rgb(241, 227, 160);">
+      <input type="text" class="form-control" placeholder="LAST NAME" aria-label="LAST NAME" style="background-color: rgb(241, 227, 160);">
+      <input type="email" class="form-control" id="inputEmail4" placeholder="E-MAIL ADDRESS" style="background-color: rgb(241, 227, 160);"> 
+      <button type="button" class="btn  btn-dark" style="text-transform: uppercase;">subscribe</button>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <div class="container-fluid bg-warning small pt-2">
+    <h3 style="text-transform: uppercase; font-weight: 500; font-size: 2rem; text-align: center; padding-top: 2rem; letter-spacing: 1px;">subscribe to our news letter</h3>
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-4 row-cols-xl-4 row-cols-xxl-4 mx-1 text-center">
+      <div class="col pb-3">
+        <input type="text" class="form-control" id="fname" name="fname" placeholder="First Name" style="background-color: rgb(241, 227, 160);">
+      </div>   
+      <div class="col pb-3">
+        <input type="text" class="form-control" id="lname" name="lname" placeholder="Last Name" style="background-color: rgb(241, 227, 160);">
+      </div>
+      <div class="col pb-3">
+        <input type="text" class="form-control" id="email" name="email" placeholder="E-mail Address" style="background-color: rgb(241, 227, 160);">
+      </div> 
+      <div class="col mb-5"> 
+        <button type="button" class="btn btn-sm btn-dark text-start"  style="text-transform: uppercase;">subscribe</button>
+      </div>
+      </div>
+    </div>  
+  </div> 
+  <div class="clear"></div>  
+  <div class="container-fluid bg-dark">
+  <div class="container">   
+    <div class="row  text-center"> 
+    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"> 
+    <p class="h3 text-center py-2 pt-5" style="color: #fff; text-transform: uppercase; font-weight: 600; font-size: 1.5rem; letter-spacing: 1px;">our team</p>
+    <p style="color: #fff; font-size: small; font-weight: 400; text-transform: capitalize; text-align: center; padding-bottom: 3%;">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+      Vel sapiente nisi dolorum quia illum explicabo tempore dolor. 
+      Iste facere
+       sapiente nisi dolorum quia illum explicabo tempore dolor. 
+      Iste facere amet blanditiis reiciendis.
+    </p>
+    </div>
+    </div>
+    <div class="row  row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-4 row-cols-xl-4 row-cols-xxl-4 text-center">
+    <div class="col col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 "> 
+    <img src="https://data.whicdn.com/images/333586764/original.jpg"  width="165" height="160" class="img-circle rounded-circle mb-3 border border-5 border-warning">
+    <p class="h4 py-2 text-center" style="text-transform: capitalize; color: #fff; font-size: medium; font-weight: 400;" >Professor</p>
+    <p style="text-align: center; color: #fff; font-size: 0.8rem; font-weight: 500; padding-bottom: 1em;  text-transform: capitalize;"> 
+      Quis natus,velit possimus placeat,
+      sapiente dolorum explicabo tempore 
+      pariaturs nisii illoo quaerats.<br>
+      <a href="" ><button class="btn btn-sm btn-warning px-3 py-1 mt-4"><i class="fa-solid fa-envelope text-light"></i></button></p></a>
+    </div>
+    <div class="col col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 ">
+      <img src="https://www.pinkvilla.com/files/styles/amp_metadata_content_image/public/money-heist-berlin.jpg"  width="165" height="160" class="img-circle rounded-circle mb-3 border border-5 border-warning">
+      <p class="h4 py-2 text-center " style="text-transform: capitalize; color: #fff; font-size: medium; font-weight: 400;" >Berlin</p>
+      <p  style="text-align: center; color: #fff; font-size: 0.8rem; font-weight: 500; padding-bottom: 1em; text-transform: capitalize;">
+        Quis natus,velit possimus placeat,
+         sapiente dolorum explicabo tempore  
+         pariaturs nisii illoo quaerats.<br>
+         <a href="" ><button class="btn btn-sm btn-warning px-3 py-1 mt-4"><i class="fa-solid fa-envelope text-light"></i></button></p></a>
+    </div>
+    <div class="col col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3"> 
+      <img src="https://i.pinimg.com/originals/c1/e8/d9/c1e8d90d1feb691ffe2f344a22bbbf98.jpg"  width="165" height="160" class="img-circle rounded-circle mb-3 border border-5 border-warning">
+      <p class="h4 py-2 text-center" style="text-transform: capitalize; color: #fff; font-size: medium; font-weight: 400;" >Nairobi</p>
+      <p  style="text-align: center; color: #fff; font-size: 0.8rem; font-weight: 500; padding-bottom: 1em; text-transform: capitalize;">
+        Quis natus,velit possimus placeat,
+         sapiente dolorum explicabo tempore  
+         pariaturs nisii illoo quaerats.<br>  
+         <a href="" ><button class="btn btn-sm btn-warning px-3 py-1 mt-4"><i class="fa-solid fa-envelope text-light"></i></button></p></a>
+    </div>
+    <div class="col col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcST053xPWPjsgcSrAMHSGTB4F4-OH5yMtXSIMkMb5ZMG3ctSRWN"  width="165" height="160" class="img-circle rounded-circle mb-3 border border-5 border-warning"> 
+      <p class="h4 py-2 text-center" style="text-transform: capitalize; color: #fff; font-size: medium; font-weight: 400;" >Raquel</p>
+      <p  style="text-align: center; color: #fff; font-size: 0.8rem; font-weight: 500; padding-bottom: 1em; text-transform: capitalize;">
+         Quis natus,velit possimus placeat,
+         sapiente dolorum explicabo tempore 
+         pariaturs nisii illoo quaerats.<br> 
+         <a href="" ><button class="btn btn-sm btn-warning px-3 py-1 mt-4"><i class="fa-solid fa-envelope text-light"></i></button></p></a>
+    </div>
+    </div>
+  </div>
+ </div>   
+ <div class="clear"></div>              
+  <div class="container-fluid bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <p class="h3 text-secondary text-center fs-5 fw-bold mb-2 pt-4">PORTFOLIO</p>
+          <p class="h6 text-secondary text-center fs-6 fw-lighter my-3 mx-2 pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+             Commodi doloremque nobis delectus quo! Exercitationem nihil,
+              sed autem repellat saepe, expedita explicabo maiores sequi modi non quia sit aut aliquid consequuntur?</p>  
+        </div>
+      </div>
+      <div class="row  row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-5 row-cols-xl-5  row-cols-xxl-5  pb-4 text-center">
+          <div class="col col-12 col-sm-12 col-md-12 col-lg-2.4 col-xl-2.4 col-xxl-2.4">
+          <p class="border border-warning py-2"><a href="" class="text-dark fs-6 fw-bold text-decoration-none">All</a></p>
+          </div>
+          <div class="col col-12 col-sm-12 col-md-12 col-lg-2.4 col-xl-2.4 col-xxl-2.4"> 
+          <p class="border border-warning  py-2"><a href="" class="text-secondary text-decoration-none">Design</a></p>
+          </div>
+          <div class="col col-12 col-sm-12 col-md-12 col-lg-2.4 col-xl-2.4 col-xxl-2.4">
+          <p class="border border-warning py-2"><a href="" class="text-secondary text-decoration-none">Identity</a></p>
+          </div>
+          <div class="col col-12 col-sm-12 col-md-12 col-lg-2.4 col-xl-2.4 col-xxl-2.4">
+            <p class="border border-warning py-2"><a href="" class="text-secondary text-decoration-none">Photography</a></p>
+          </div>
+          <div class="col col-12 col-sm-12 col-md-12 col-lg-2.4 col-xl-2.4 col-xxl-2.4">
+           <p class="border border-warning py-2"><a href="" class="text-secondary text-decoration-none">Illustrasion</a></p>
+          </div> 
+      </div>    
+    </div>  
+  </div>                       
+  <div class="clear"></div>  
+  <div class="container-fluid bg-light">  
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-3 row-cols-xl-3 row-cols-xxl-3 pt-4 justify-content-evenly">
+     <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 mt-4"> 
+       <div class="imgprofessor">
+       <div class="para">
+       <p class="h5">Professer</p>
+       <p class="h6 fs-6 fw-lighter">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+       </div>
+       </div>     
+     </div>
+     
+     <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 mt-4"> 
+        <div class="imgtokyo">
+        <div class="para">
+        <p class="h5">Tokyo</p>
+        <p class="h6 fs-6 fw-lighter">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+        </div>   
+     </div>
+     <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 mt-4"> 
+        <div class="imgberlin">
+        <div class="para">
+        <p class="h5">Berlin</p>
+        <p class="h6 fs-6 fw-lighter">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p> 
+        </div>
+        </div> 
+     </div>
+    </div>
+    <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-3 row-cols-xl-3 row-cols-xxl-3 pt-1 justify-content-evenly">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 mt-4"> 
+        <div class="imgraquel">
+        <div class="para">
+        <p class="h5">Raquel</p>
+        <p class="h6 fs-6 fw-lighter">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+        </div>     
+      </div>
+      
+      <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 mt-4"> 
+         <div class="imgnairobi">
+         <div class="para">
+         <p class="h5">Nairobi</p>
+         <p class="h6 fs-6 fw-lighter">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+         </div>
+         </div>     
+      </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 mt-4"> 
+         <div class="imgdenver">
+         <div class="para">
+         <p class="h5">Denver</p>
+         <p class="h6 fs-6 fw-lighter">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p> 
+         </div>
+         </div> 
+      </div>
+     </div>
+     <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-3 row-cols-xl-3 row-cols-xxl-3 pt-1 pb-5 justify-content-evenly">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 mt-4"> 
+        <div class="imghelsinki">
+        <div class="para">
+        <p class="h5">Helsinki</p>
+        <p class="h6 fs-6 fw-lighter">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+        </div>     
+      </div>
+      
+      <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 mt-4"> 
+         <div class="imgrio">
+         <div class="para">
+         <p class="h5">Rio</p>
+         <p class="h6 fs-6 fw-lighter">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+         </div>
+         </div>   
+      </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 mt-4"> 
+         <div class="imgpalermo">
+         <div class="para">
+         <p class="h5">Palermo</p>
+         <p class="h6 fs-6 fw-lighter">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p> 
+         </div>
+         </div> 
+      </div>
+     </div>
+  </div>
+  </div>
+  <div class="clear"></div>
+  <div class="background2">
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-1 row-cols-xl-1 row-cols-xxl-1">
+       <div class="col col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+         <p class="h4 text-center fs-5 fw-bold pt-5" style="text-transform: uppercase; color: #fff;">contact</p> 
+         <p class="h5 text-center fs-6 fw-lighter pt-2 pb-4"  style="text-transform: capitalize; color: #fff;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+          Placeat accusamus tempora doloribus esse amet vel rerum eaque error eveniet, illum, 
+          officiis nisi? Qui quam non esse. Voluptatem commodi earum nulla.</p>
+       </div>
+       <div class="col col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+        <form action="" method="POST">
+           <div class="form-group py-2 mx-3"> 
+           <input type="text" class="form-control" id="name" name="name" placeholder="Enter your Name">
+           </div> 
+           <div class="form-group py-2 mx-3">
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your Address">
+           </div> 
+           <div class="form-group py-2 mx-3">
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your City">
+           </div> 
+           <div class="form-group py-2 mx-3">
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your Name">
+           </div> 
+           <div class="form-group py-2 mx-3">
+            <input type="email" class="form-control" id="email" placeholder="Enter your Email Address" aria-describedby="email"> 
+           </div>
+           <div class="form-group py-2 mx-3">
+            <textarea name="message" id="message" class="form-control" rows="4" placeholder="Enter your Message"></textarea>
+           </div> 
+           <div class="form-group py-2 pt-3 pb-5  text-center">
+             <button class="btn btn-warning fs-6 fw-lighter px-5 py-1" style="color: #fff; text-transform: uppercase;">submit</button>
+           </div>
+           <p class="h6 text-center pt-5 fs-6 fw-lighter" style="text-transform: capitalize; color: #fff;">home &nbsp; : about &nbsp; : team &nbsp; : Portfolio &nbsp; : contact</p>
+           <p class="h6  text-center pb-4 fs-6 fw-lighter" style="text-transform: capitalize; color: #fff;">copyrights&nbsp;<i class="fa-regular fa-copyright"></i> 2022 all rights are reserved</p>
+         </form>
+       </div>
+      </div>
+    </div>
+  </div> 
+  </div> 
+        
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> 
+</body>
+</html>
